@@ -14,6 +14,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .portfolio_wrapper {
@@ -21,7 +22,7 @@ html {
     width: 100%;
 }
 
-.container {
+.portfoilio_container {
     height: 100%;
     width: 100%;
 }
@@ -187,4 +188,219 @@ a {
         height: 440px;
         background-size: 100%;
     }
+}
+
+.about_wrapper {
+    position: relative;
+}
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.about_me_wrapper {
+    transform: translate(0px, 0px);
+    transition: transform 0.5s ease 0s;
+    /* flex-basis: 1263px; */
+    visibility: visible;
+    height: auto;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+}
+
+.about_me_wrapper_inner {
+    display: flex;
+    flex-direction: row;
+    backface-visibility: hidden;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.about_me_wrapper_split {
+    display: flex;
+    display: flex;
+    margin-left: 16.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    margin-left: 16.666667%;
+}
+
+.about_left {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    margin-bottom: 3rem;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .about_left {
+        /* margin-left: 16.666667%; */
+    }
+}
+
+.order-1 {
+    order: 1;
+}
+
+.order-2 {
+    order: 2;
+}
+
+@media (min-width: 420px) {
+    .about_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .about_me_wrapper {
+        padding: 8rem 0;
+    }
+}
+
+.section_title {
+    position: relative;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #0f0f0f;
+}
+
+@media (min-width: 992px) {
+    .section_title {
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 992px) {
+    .section_title>.title {
+        text-align: left;
+    }
+}
+
+.section_title>.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: .325rem;
+}
+
+.title_desc {
+    font-size: 1.175rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, .29);
+    text-align: center;
+}
+
+.about_text {
+    font-size: .975rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, .65);
+    line-height: 1.625;
+    text-align: center;
+    margin: 0 auto 2rem;
+    width: 60%;
+}
+
+@media (min-width: 768px) {
+    .about_text {
+        text-align: left;
+        width: auto;
+    }
+}
+
+.about_right {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.about-img-wrapper {
+    border-radius: 50%;
+    width: 40%;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .about-img-wrapper {
+        margin-bottom: 0;
+        background: #e7e7e7;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.about-img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transform: translate(.5rem, -.5rem);
+    transition: transform .5s ease-in-out;
+    border-radius: inherit;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px -20px;
+}
+
+.about-img-wrapper:hover img {
+    transform: translate(1rem, -1rem)
 }
