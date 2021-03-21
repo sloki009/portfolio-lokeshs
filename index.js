@@ -1,5 +1,8 @@
 window.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("page_loader_wrapper").classList.add("loaded");
+  setTimeout(() => {
+    document.getElementById("page_loader_wrapper").classList.add("loaded");
+  }, 500);
+
   window.addEventListener("scroll", () => {
     let styleObj = {};
 
