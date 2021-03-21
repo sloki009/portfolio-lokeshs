@@ -85,7 +85,7 @@ html {
     background-size: cover;
     background-position: 50%;
     color: hsla(0, 0%, 100%, .95);
-    background: url(/images/memphis.png);
+    background: url(/images/squares.png);
 }
 
 .header_scroll_btn {
