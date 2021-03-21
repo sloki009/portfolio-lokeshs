@@ -9,21 +9,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link data-n-head="ssr" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,600,800,900&amp;display=swap">
     <link rel="stylesheet" href="./index.css">
+
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+            window.addEventListener("scroll", () => {
+                let styleObj = {};
+
+                console.log("scrollY", window.scrollY);
+
+                if (window.scrollY > 64) {
+                    //navElem.style.background = "#000";
+                    styleObj["navbgColor"] = "#000";
+                    styleObj["aColor"] = "rgba(255,255,255,.75)";
+
+                } else if (window.scrollY < 64) {
+                    //navElem.style.background = "none";
+                    styleObj["navbgColor"] = "none";
+                    styleObj["aColor"] = "rgba(255,255,255,.75)";
+                }
+                if (window.scrollY > 440) {
+                    //navElem.style.background = "#fff";
+                    styleObj["navbgColor"] = "#fff";
+                    styleObj["aColor"] = "rgba(15, 15, 15, 0.75)";
+                }
+                console.log(styleObj);
+                handleNavbar(styleObj);
+            });
+
+            function handleNavbar({
+                navbgColor,
+                aColor
+            }) {
+
+                console.log("inhandlenavbarr...", navbgColor, aColor);
+                let navElem = document.querySelector("#nav_wrapper");
+                navElem.style.background = navbgColor;
+                let navlinks = document.querySelectorAll("#navbar_links a");
+                for (var i = 0; i < navlinks.length; ++i) {
+                    navlinks[i].style.color = aColor;
+                }
+            }
+        })
+    </script>
 </head>
 
 <body>
     <div class="portfolio_wrapper">
         <div class="portfoilio_container">
-            <div class="nav_wrapper">
+            <div class="nav_wrapper" id="nav_wrapper">
                 <div class="navbar">
-                    <div class="navbar_links">
-                        <a href="#">HOME</a><a href="#">PORTFOLIO</a><a href="#">ABOUT</a><a href="#">RESUME</a>
+                    <div class="navbar_links" id="navbar_links">
+                        <a href="#home">HOME</a>
+                        <a href="#portfolio_projects">PORTFOLIO</a>
+                        <a href="#about">ABOUT</a>
+                        <a href="./files/Resume_Lokesh (4).pdf" download="Lokesh_Resume.pdf">RESUME</a>
                     </div>
                 </div>
             </div>
             <div class="header">
                 <section>
-                    <div id="header_banner" class="header_wrapper">
+                    <div id="home" class="header_wrapper">
                         <a href="#" class="header_scroll_btn">
                             <span class="header_scroll_btn_inner">
                                 <i class="fas fa-angle-double-down"></i>
@@ -71,6 +116,79 @@
                         </div>
                     </div>
                 </section>
+                <section>
+                    <div class="portfolio_projects_wrapper" id="portfolio_projects">
+                        <div class="container">
+                            <div class="row">
+                                <div class="portfolio_proj_wrapper_split" style="display: block;">
+                                    <div class="section_title" style="margin-bottom:5rem">
+                                        <div class="title">
+                                            Portfolio
+                                        </div>
+                                        <div class="title_desc">
+                                            Most Recent Work
+                                        </div>
+
+                                    </div>
+                                    <div class="porfolio_projects_row" style="margin-bottom:8rem">
+                                        <div class="portfolio_project_img">
+                                            <img src="./images/netflix_clone.png" alt="netflix clone" class="card_img" style="transform: rotateX(0deg) rotateY(0deg);">
+                                        </div>
+                                        <div class="portfolio_project_text_right">
+                                            <h3 class="portfolio_proj_h3">Netflix Clone</h3>
+                                            <p class="portfolio_proj_p">Written in ReactJs and React Hooks, this is a clone of netflix's landing page.</p>
+                                            <a target="_blank" href="https://netflix-clone-398fa.web.app/" class="portfolio_proj_link">Visit Website</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="porfolio_projects_row reverse-items" style="margin-bottom:8rem">
+                                        <div class="portfolio_project_img">
+                                            <img src="./images/what2cook.png" alt="food recipe app" class="card_img" style="transform: rotateX(0deg) rotateY(0deg);">
+                                        </div>
+                                        <div class="portfolio_project_text_left">
+                                            <h3 class="portfolio_proj_h3">Food Recipe App</h3>
+                                            <p class="portfolio_proj_p">Written in ReactJs and React Hooks, this is a food recipe application that takes user's ingredients and provides the matching recipes .</p>
+                                            <a target="_blank" href="https://what2cook.netlify.app/" class="portfolio_proj_link">Visit Website</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="footer_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer_split">
+                            <div class="footer_items">
+                                <div class="footer_item">
+                                    <div class="footer_header">
+                                        Explore</div>
+                                    <div class="footer_text">
+                                        <a href="#home" class="footer_link">Home</a>
+                                        <a href="#portfolio_projects" class="footer_link">Portfolio</a>
+                                        <a href="#about" class="footer_link">About</a>
+                                        <a href="./files/Resume_Lokesh (4).pdf" download="
+                                        Resume_Lokesh.pdf" class="footer_link">Resume</a>
+                                    </div>
+                                </div>
+                                <div class="footer_item">
+                                    <div class="footer_header">
+                                        Follow</div>
+                                    <div class="footer_icons">
+                                        <a href="https://github.com/sloki009/portfolio-lokeshs.git" class="footer_icon" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/lokesh-s-680539143/" class="footer_icon" target="_blank">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
