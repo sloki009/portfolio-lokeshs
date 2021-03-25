@@ -76,6 +76,12 @@ html {
     transition: background .35s
 }
 
+@media (max-width: 768px) {
+    .nav_wrapper {
+        display: none;
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -141,6 +147,12 @@ html {
     padding: 1rem;
     outline: 0;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .header_scroll_btn {
+        display: none;
+    }
 }
 
 .header_scroll_btn_text {
@@ -251,6 +263,7 @@ a {
     position: relative;
     overflow: hidden;
     align-items: center;
+    padding: 3rem 0;
 }
 
 .about_me_wrapper_inner {
@@ -298,6 +311,78 @@ a {
     margin-left: -15px;
 }
 
+.col-md-8,
+.col-md-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.order-2 {
+    order: 2;
+}
+
+@media (min-width: 768px) {
+    .styled-left {
+        text-align: left;
+        margin-bottom: 0;
+        align-items: center;
+    }
+}
+
+.styled-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .order-md-1 {
+        order: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .order-md-2 {
+        order: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.order-1 {
+    order: 1;
+}
+
+@media (min-width: 768px) {
+    .col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .offset-md-2 {
+        margin-left: 16.666667%;
+    }
+}
+
 .about_me_wrapper_split,
 .portfolio_proj_wrapper_split,
 .footer_split {
@@ -307,6 +392,27 @@ a {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
     margin-left: 16.666667%;
+}
+
+.about_me_wrapper_split {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .offset_about {
+        margin-left: 16.666667%;
+    }
+}
+
+@media (min-width: 768px) {
+    .offset_about {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
 }
 
 .about_left {
@@ -328,14 +434,6 @@ a {
     .about_left {
         /* margin-left: 16.666667%; */
     }
-}
-
-.order-1 {
-    order: 1;
-}
-
-.order-2 {
-    order: 2;
 }
 
 @media (min-width: 420px) {
