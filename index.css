@@ -132,6 +132,7 @@ html {
     background-position: 50%;
     color: hsla(0, 0%, 100%, .95);
     background: url(/images/squares.png);
+    background-position: top;
 }
 
 .header_scroll_btn {
